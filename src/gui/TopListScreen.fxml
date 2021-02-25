@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane prefHeight="456" prefWidth="688" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TopListView">
+   <children>
+      <Button fx:id="topAiringBtn" layoutX="40.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleTopAiringButton" prefHeight="25.0" prefWidth="77.0" text="Top Airing" />
+      <Button fx:id="topUpcomingBtn" layoutX="191.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleTopUpcomingButton" prefHeight="25.0" prefWidth="102.0" text="Top Upcoming" />
+      <Button fx:id="topSeriesBtn" layoutX="381.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleTopSeriesButton" prefHeight="25.0" prefWidth="77.0" text="Top Series" />
+      <Button fx:id="topMoviesBtn" layoutX="549.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleTopMoviesButton" prefHeight="25.0" prefWidth="92.0" text="Top Movies" />
+      <AnchorPane fx:id="webViewPane" layoutX="50.0" layoutY="105.0" prefHeight="340.0" prefWidth="586.0">
+         <children>
+            <WebView fx:id="webView" layoutY="-18.0" prefHeight="334.0" prefWidth="586.0" />
+            <Button fx:id="backBtn" layoutX="239.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="25.0" prefWidth="77.0" text="Back" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

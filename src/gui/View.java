@@ -12,6 +12,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.json.JSONException;
 
@@ -34,6 +35,8 @@ public class View extends Application
     @FXML
     private TextField searchText;
     private String websiteURL;
+    @FXML
+    private AnchorPane mainPane;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -49,7 +52,7 @@ public class View extends Application
 
         //Sets the application logo and other default things.
         stage.getIcons().add(new Image(View.class.getResourceAsStream("images/icon.jpg")));
-        stage.setTitle("Anime Viewer");
+        stage.setTitle("Anime Viewer - Main View");
         stage.setResizable(false);
         Scene s = new Scene(root);
         stage.setScene(s);
@@ -110,7 +113,16 @@ public class View extends Application
         if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
             Desktop.getDesktop().browse(new URI(websiteURL));
         }
+    }
 
 
+    public void clickTopListButton() throws IOException {
+        TopListView v = new TopListView();
+        v.init();
+        idLbl.getScene().getWindow().hide();
+    }
+
+    public AnchorPane getMainPane() {
+        return mainPane;
     }
 }

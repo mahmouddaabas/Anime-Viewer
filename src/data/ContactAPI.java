@@ -18,10 +18,6 @@ public class ContactAPI
     private double score;
     private String url, imageUrl, title, synopsis, rated, keyword;
 
-    public ContactAPI() throws IOException, InterruptedException, JSONException {
-        getData();
-    }
-
     public void getData() throws IOException, InterruptedException, JSONException {
 
         try {

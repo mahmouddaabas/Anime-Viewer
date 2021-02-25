@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="456.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.View">
+<AnchorPane fx:id="mainPane" prefHeight="456.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.View">
     <children>
         <TextField fx:id="searchText" layoutX="261.0" layoutY="388.0">
          <font>
@@ -43,5 +43,6 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </TextArea>
+      <Button fx:id="viewTopListBtn" layoutX="16.0" layoutY="417.0" mnemonicParsing="false" onAction="#clickTopListButton" prefHeight="25.0" prefWidth="99.0" text="View Top List" />
     </children>
 </AnchorPane>
