@@ -16,7 +16,7 @@
                 <Font name="Times New Roman Bold" size="24.0" />
             </font>
         </Label>
-        <ImageView fx:id="showImage" fitHeight="183.0" fitWidth="235.0" layoutX="431.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="showImage" fitHeight="183.0" fitWidth="235.0" layoutX="431.0" layoutY="22.0" onMouseClicked="#clickImage" pickOnBounds="true" preserveRatio="true" />
         <Button fx:id="searchBtn" layoutX="315.0" layoutY="417.0" mnemonicParsing="false" onAction="#searchButton" text="Search" />
         <Label fx:id="titleLbl" layoutX="31.0" layoutY="55.0" text="Title: " textFill="WHITE">
             <font>

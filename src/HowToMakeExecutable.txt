@@ -1,0 +1,15 @@
+First you create a fake main class that does NOT extend application, this class should simply call the real main method.
+
+Example:
+
+public class AlternateMain
+{
+    public static void main(String[] args) throws InterruptedException, JSONException, IOException {
+        run.Main.main(args);
+    }
+}
+
+Then you go to Artifacts, click on the + and click on Jar, from modules from dependency then you select your fake main method.
+When you can see all the files that are gonna get exported into your jar, you click on the plus and go to where you installed JavaFX.
+You then go to the Bin folder and add All the .dll files to the jar file.
+Once that is done you simply build the artifact and the JAR will be able to be ran.
