@@ -12,12 +12,16 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.json.JSONException;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 public class View extends Application
@@ -30,6 +34,9 @@ public class View extends Application
     private ImageView showImage;
     @FXML
     private TextField searchText;
+    private String websiteURL;
+    @FXML
+    private AnchorPane mainPane;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -43,7 +50,9 @@ public class View extends Application
                 "-fx-background-position: center center; " +
                 "-fx-background-repeat: stretch;");
 
-        stage.setTitle("Anime Viewer");
+        //Sets the application logo and other default things.
+        stage.getIcons().add(new Image(View.class.getResourceAsStream("images/icon.jpg")));
+        stage.setTitle("Anime Viewer - Main View");
         stage.setResizable(false);
         Scene s = new Scene(root);
         stage.setScene(s);
@@ -61,6 +70,9 @@ public class View extends Application
         data.setKeyword(replace(sendKeyword));
         //Call the method to populate the getters and setters.
         data.getData();
+
+        //Save the website url to a variable so it can be used in another method when the image is clicked.
+        this.websiteURL = data.getUrl();
 
         idLbl.setText("ID: " + data.getId());
         titleLbl.setText("Title: " + data.getTitle());
@@ -92,5 +104,21 @@ public class View extends Application
         s = s.trim();
         s = s.replaceAll(" ", "%20");
         return s;
+    }
+
+    public void clickImage() throws InterruptedException, JSONException, IOException, URISyntaxException {
+
+        //Website url is saved in the websiteURL variable when the data is retrieved in from the API in the getData method.
+
+        if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+            Desktop.getDesktop().browse(new URI(websiteURL));
+        }
+    }
+
+
+    public void clickTopListButton() throws IOException {
+        TopListView v = new TopListView();
+        v.init();
+        idLbl.getScene().getWindow().hide();
     }
 }

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="456.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.View">
+<AnchorPane fx:id="mainPane" prefHeight="456.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.View">
     <children>
         <TextField fx:id="searchText" layoutX="261.0" layoutY="388.0">
          <font>
@@ -16,7 +16,7 @@
                 <Font name="Times New Roman Bold" size="24.0" />
             </font>
         </Label>
-        <ImageView fx:id="showImage" fitHeight="183.0" fitWidth="235.0" layoutX="431.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="showImage" fitHeight="183.0" fitWidth="235.0" layoutX="431.0" layoutY="22.0" onMouseClicked="#clickImage" pickOnBounds="true" preserveRatio="true" />
         <Button fx:id="searchBtn" layoutX="315.0" layoutY="417.0" mnemonicParsing="false" onAction="#searchButton" text="Search" />
         <Label fx:id="titleLbl" layoutX="31.0" layoutY="55.0" text="Title: " textFill="WHITE">
             <font>
@@ -43,5 +43,6 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </TextArea>
+      <Button fx:id="viewTopListBtn" layoutX="16.0" layoutY="417.0" mnemonicParsing="false" onAction="#clickTopListButton" prefHeight="25.0" prefWidth="99.0" text="View Top List" />
     </children>
 </AnchorPane>
