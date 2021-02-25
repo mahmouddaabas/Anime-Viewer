@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="456.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.View">
+    <children>
+        <TextField fx:id="searchText" layoutX="261.0" layoutY="388.0">
+         <font>
+            <Font name="Times New Roman Bold" size="12.0" />
+         </font></TextField>
+        <Label fx:id="idLbl" layoutX="31.0" layoutY="26.0" text="ID: " textFill="WHITE">
+            <font>
+                <Font name="Times New Roman Bold" size="24.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="showImage" fitHeight="183.0" fitWidth="235.0" layoutX="431.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+        <Button fx:id="searchBtn" layoutX="315.0" layoutY="417.0" mnemonicParsing="false" onAction="#searchButton" text="Search" />
+        <Label fx:id="titleLbl" layoutX="31.0" layoutY="55.0" text="Title: " textFill="WHITE">
+            <font>
+                <Font name="Times New Roman Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="episodesLbl" layoutX="31.0" layoutY="84.0" text="Episodes:" textFill="WHITE">
+            <font>
+                <Font name="Times New Roman Bold" size="24.0" />
+            </font>
+        </Label>
+      <Label fx:id="scoreLbl" layoutX="31.0" layoutY="113.0" text="Score: " textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="ratedLbl" layoutX="31.0" layoutY="142.0" text="Rated:" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="descriptionTxtArea" editable="false" layoutX="178.0" layoutY="228.0" prefHeight="146.0" prefWidth="327.0" stylesheets="@cssFiles/textArea.css" wrapText="true">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </TextArea>
+    </children>
+</AnchorPane>
