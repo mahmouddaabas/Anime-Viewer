@@ -121,8 +121,4 @@ public class View extends Application
         v.init();
         idLbl.getScene().getWindow().hide();
     }
-
-    public AnchorPane getMainPane() {
-        return mainPane;
-    }
 }
