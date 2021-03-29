@@ -4,19 +4,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.web.*?>
 
-<AnchorPane prefHeight="456" prefWidth="688" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TopListView">
+<AnchorPane prefHeight="526" prefWidth="878.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TopListView">
     <children>
         <Button fx:id="topAiringBtn" layoutX="40.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleTopAiringButton" prefHeight="25.0" prefWidth="77.0" text="Top Airing" />
-        <Button fx:id="topUpcomingBtn" layoutX="191.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleTopUpcomingButton" prefHeight="25.0" prefWidth="102.0" text="Top Upcoming" />
-        <Button fx:id="topSeriesBtn" layoutX="381.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleTopSeriesButton" prefHeight="25.0" prefWidth="77.0" text="Top Series" />
-        <Button fx:id="topMoviesBtn" layoutX="549.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleTopMoviesButton" prefHeight="25.0" prefWidth="92.0" text="Top Movies" />
-          <Button fx:id="backBtn" layoutX="296.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="25.0" prefWidth="77.0" text="Back" />
-        <StackPane layoutX="10.0" layoutY="82.0" prefHeight="325.0" prefWidth="670.0">
+        <Button fx:id="topUpcomingBtn" layoutX="253.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleTopUpcomingButton" prefHeight="25.0" prefWidth="102.0" text="Top Upcoming" />
+        <Button fx:id="topSeriesBtn" layoutX="511.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleTopSeriesButton" prefHeight="25.0" prefWidth="77.0" text="Top Series" />
+        <Button fx:id="topMoviesBtn" layoutX="752.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleTopMoviesButton" prefHeight="25.0" prefWidth="92.0" text="Top Movies" />
+          <Button fx:id="backBtn" layoutX="381.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="25.0" prefWidth="77.0" text="Back" />
+        <StackPane layoutX="10.0" layoutY="82.0" prefHeight="393.0" prefWidth="861.0">
          <children>
-                <WebView fx:id="webView" prefHeight="217.0" prefWidth="586.0" />
+                <WebView fx:id="webView" prefHeight="325.0" prefWidth="853.0" />
          </children>
       </StackPane>
-      <Button fx:id="zoomOutButton" layoutX="87.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleZoomOutButton" prefHeight="25.0" prefWidth="77.0" text="Zoom Out" />
-      <Button fx:id="zoomInButton" layoutX="518.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleZoomInButton" prefHeight="25.0" prefWidth="77.0" text="Zoom In" />
+      <Button fx:id="zoomOutButton" layoutX="79.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleZoomOutButton" prefHeight="25.0" prefWidth="77.0" text="Zoom Out" />
+      <Button fx:id="zoomInButton" layoutX="713.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleZoomInButton" prefHeight="25.0" prefWidth="77.0" text="Zoom In" />
     </children>
 </AnchorPane>

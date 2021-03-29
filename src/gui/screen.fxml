@@ -5,44 +5,45 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="mainPane" prefHeight="456.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.View">
+<AnchorPane fx:id="mainPane" prefHeight="526.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.View">
     <children>
-        <TextField fx:id="searchText" layoutX="261.0" layoutY="388.0">
+        <TextField fx:id="searchText" layoutX="340.0" layoutY="451.0">
          <font>
             <Font name="Times New Roman Bold" size="12.0" />
          </font></TextField>
         <Label fx:id="idLbl" layoutX="31.0" layoutY="26.0" text="ID: " textFill="WHITE">
             <font>
-                <Font name="Times New Roman Bold" size="24.0" />
+                <Font name="Times New Roman Bold" size="28.0" />
             </font>
         </Label>
-        <ImageView fx:id="showImage" fitHeight="183.0" fitWidth="235.0" layoutX="431.0" layoutY="22.0" onMouseClicked="#clickImage" pickOnBounds="true" preserveRatio="true" />
-        <Button fx:id="searchBtn" layoutX="315.0" layoutY="417.0" mnemonicParsing="false" onAction="#searchButton" text="Search" />
+        <ImageView fx:id="showImage" fitHeight="245.0" fitWidth="275.0" layoutX="557.0" layoutY="20.0" onMouseClicked="#clickImage" pickOnBounds="true" preserveRatio="true" />
+        <Button fx:id="searchBtn" layoutX="393.0" layoutY="480.0" mnemonicParsing="false" onAction="#searchButton" text="Search" />
         <Label fx:id="titleLbl" layoutX="31.0" layoutY="55.0" text="Title: " textFill="WHITE">
             <font>
-                <Font name="Times New Roman Bold" size="24.0" />
+                <Font name="Times New Roman Bold" size="28.0" />
             </font>
         </Label>
         <Label fx:id="episodesLbl" layoutX="31.0" layoutY="84.0" text="Episodes:" textFill="WHITE">
             <font>
-                <Font name="Times New Roman Bold" size="24.0" />
+                <Font name="Times New Roman Bold" size="28.0" />
             </font>
         </Label>
       <Label fx:id="scoreLbl" layoutX="31.0" layoutY="113.0" text="Score: " textFill="WHITE">
          <font>
-            <Font name="Times New Roman Bold" size="24.0" />
+            <Font name="Times New Roman Bold" size="28.0" />
          </font>
       </Label>
       <Label fx:id="ratedLbl" layoutX="31.0" layoutY="142.0" text="Rated:" textFill="WHITE">
          <font>
-            <Font name="Times New Roman Bold" size="24.0" />
+            <Font name="Times New Roman Bold" size="28.0" />
          </font>
       </Label>
-      <TextArea fx:id="descriptionTxtArea" editable="false" layoutX="178.0" layoutY="228.0" prefHeight="146.0" prefWidth="327.0" stylesheets="@cssFiles/textArea.css" wrapText="true">
+      <TextArea fx:id="descriptionTxtArea" editable="false" layoutX="228.0" layoutY="296.0" prefHeight="146.0" prefWidth="373.0" stylesheets="@cssFiles/textArea.css" wrapText="true">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </TextArea>
-      <Button fx:id="viewTopListBtn" layoutX="16.0" layoutY="417.0" mnemonicParsing="false" onAction="#clickTopListButton" prefHeight="25.0" prefWidth="99.0" text="View Top List" />
+      <Button fx:id="viewTopListBtn" layoutX="31.0" layoutY="480.0" mnemonicParsing="false" onAction="#clickTopListButton" prefHeight="25.0" prefWidth="99.0" text="View Top List" />
+      <Button fx:id="searchBtn1" layoutX="748.0" layoutY="480.0" mnemonicParsing="false" onAction="#handleWatchVideoButton" text="Watch Video" visible="false" />
     </children>
 </AnchorPane>

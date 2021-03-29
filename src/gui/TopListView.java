@@ -21,7 +21,7 @@ public class TopListView {
     private WebView webView;
     @FXML
     private StackPane stackPane;
-    private double zoom = 1;
+    private double zoom = 0.85;
 
     public void init() throws IOException {
 
@@ -32,7 +32,7 @@ public class TopListView {
         Parent root = FXMLLoader.load(getClass().getResource("TopListScreen.fxml"));
 
         //Adds background image to the program. (This works)
-        String image = View.class.getResource("images/background2.png").toExternalForm();
+        String image = View.class.getResource("images/background.png").toExternalForm();
         root.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
                 "-fx-background-repeat: stretch;");
@@ -48,8 +48,15 @@ public class TopListView {
 
     public void showWeb() {
 
+        //Makes sure that the web browser does not open if the link does not include MyAnimeList.
+        /*if(!url.contains("myanimelist")) {
+            url = "";
+            System.out.println("URL Does not contain 'MyAnimeList'");
+        }*/
+
         //Gets the URL from the button that is clicked.
         String urlweb = url;
+        webView.setZoom(zoom);
         WebEngine web = webView.getEngine();
         web.load(urlweb);
 
@@ -120,7 +127,7 @@ public class TopListView {
         Parent root = FXMLLoader.load(getClass().getResource("screen.fxml"));
 
         //Adds background image to the program. (This works)
-        String image = View.class.getResource("images/background2.png").toExternalForm();
+        String image = View.class.getResource("images/background.png").toExternalForm();
         root.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
                 "-fx-background-repeat: stretch;");

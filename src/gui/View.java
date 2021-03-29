@@ -45,7 +45,7 @@ public class View extends Application
         Parent root = FXMLLoader.load(getClass().getResource("screen.fxml"));
 
         //Adds background image to the program. (This works)
-        String image = View.class.getResource("images/background2.png").toExternalForm();
+        String image = View.class.getResource("images/background.png").toExternalForm();
         root.setStyle("-fx-background-image: url('" + image + "'); " +
                 "-fx-background-position: center center; " +
                 "-fx-background-repeat: stretch;");
@@ -88,8 +88,8 @@ public class View extends Application
         image = ImageIO.read(url);
         Image img = SwingFXUtils.toFXImage(image, null);
         showImage.setPreserveRatio(false);
-        showImage.setFitWidth(235);
-        showImage.setFitHeight(185);
+        showImage.setFitWidth(275);
+        showImage.setFitHeight(245);
         showImage.setImage(img);
 
     }
@@ -119,6 +119,13 @@ public class View extends Application
     public void clickTopListButton() throws IOException {
         TopListView v = new TopListView();
         v.init();
+        idLbl.getScene().getWindow().hide();
+    }
+
+
+    public void handleWatchVideoButton() throws IOException {
+        VideoPlayerView player = new VideoPlayerView();
+        player.init();
         idLbl.getScene().getWindow().hide();
     }
 }
